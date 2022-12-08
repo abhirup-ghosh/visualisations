@@ -68,11 +68,11 @@ def make_economist_barplot(fig_size=(3,6),
                             linewidth = 0))
 
     # Add in title and subtitle
-    ax.text(x=-.1, y=.96, s=title_text, transform=fig.transFigure, ha='left', fontsize=10, weight='bold', alpha=.8)
-    ax.text(x=-.1, y=.925, s=sub_title_text, transform=fig.transFigure, ha='left', fontsize=8, alpha=.8)
+    ax.text(x=-.1, y=.96, s=title_text, transform=fig.transFigure, ha='left', fontsize=10, weight='bold', alpha=.8, fontname="Arial Black")
+    ax.text(x=-.1, y=.925, s=sub_title_text, transform=fig.transFigure, ha='left', fontsize=8, alpha=.8, fontname="Arial Narrow")
 
     # Set source text
-    ax.text(x=-.1, y=.05, s=source_text, transform=fig.transFigure, ha='left', fontsize=5, alpha=.7)
+    ax.text(x=-.1, y=.05, s=source_text, transform=fig.transFigure, ha='left', fontsize=5, alpha=.7, fontname="Arial Narrow")
 
     plt.tight_layout()
 
