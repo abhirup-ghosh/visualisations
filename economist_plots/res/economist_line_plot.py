@@ -65,11 +65,11 @@ def make_economist_lineplot(fig_size=(8,4),
                             linewidth = 0))
 
     # Add in title and subtitle
-    ax.text(x=0, y=1.15, s=title_text, transform=ax.transAxes, ha='left', fontsize=13, weight='bold', alpha=.8, fontname="Arial Narrow")
-    ax.text(x=0, y=1.08, s=sub_title_text, transform=ax.transAxes, ha='left', fontsize=11, alpha=.8, fontname="Georgia")                         
+    ax.text(x=0, y=1.15, s=title_text, transform=ax.transAxes, ha='left', fontsize=13, weight='bold', alpha=.8, fontname="Arial Black")
+    ax.text(x=0, y=1.08, s=sub_title_text, transform=ax.transAxes, ha='left', fontsize=11, alpha=.8, fontname="Arial Narrow")                         
 
     # Set source text
-    ax.text(x=0, y=-0.12, s=source_text, transform=ax.transAxes, ha='left', fontsize=9, alpha=.7, fontname="Georgia")
+    ax.text(x=0, y=-0.12, s=source_text, transform=ax.transAxes, ha='left', fontsize=9, alpha=.7, fontname="Arial Narrow")
 
     plt.tight_layout()
 
@@ -80,7 +80,10 @@ if __name__ == '__main__':
 
 
     # Make the base plot using the function above
-    fig, ax = make_economist_lineplot(fig_size=(10,4))
+    fig, ax = make_economist_lineplot(fig_size=(5,5),
+                                    title_text="Ahead of the pack",
+                                    sub_title_text="Top 9 countries by GDP, in trillions of USD",
+                                    source_text="""Source: "GDP of all countries(1960-2020)" via Kaggle.com""")
     
     # dummy data to be plot
     x = np.linspace(0,1,100)
@@ -88,7 +91,7 @@ if __name__ == '__main__':
         ax.plot(x, np.random.randn(len(x)), alpha=0.3, lw=3, color='k')
 
     ax.set_xlim([0,1])
-    ax.set_xlabel('time (s)', fontname = "Helvetica", fontsize=12)
+    #ax.set_xlabel('time (s)', fontname = "Helvetica", fontsize=12)
 
     ## limits
     ax.set_ylim([-10, 10])    
